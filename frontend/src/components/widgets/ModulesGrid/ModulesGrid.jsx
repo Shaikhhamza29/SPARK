@@ -76,6 +76,7 @@ function ModulesGrid(){
         }
 
     ];
+    
 
     return(
 

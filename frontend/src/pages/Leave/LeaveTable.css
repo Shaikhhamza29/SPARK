@@ -1,0 +1,98 @@
+.leave-table-container {
+    margin-top: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+}
+
+.leave-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.leave-table thead {
+    background-color: #2563eb;
+    color: white;
+}
+
+.leave-table th {
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.leave-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.leave-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.leave-table tbody tr:hover {
+    background-color: #eef4ff;
+    transition: 0.3s;
+}
+
+/* Status Badge */
+
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Edit Button */
+
+.edit-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.edit-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .leave-table {
+        font-size: 12px;
+    }
+
+    .leave-table th,
+    .leave-table td {
+        padding: 10px;
+    }
+
+    .edit-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}

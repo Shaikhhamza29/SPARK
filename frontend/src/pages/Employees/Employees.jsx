@@ -8,6 +8,10 @@ function Employees() {
     // Show or hide Add Employee form
   const [showForm, setShowForm] = useState(false);
   const [employeeName, setEmployeeName] = useState("");
+  const [employeeTypes, setEmployeeTypes] = useState([]);
+  const [locations, setLocations] = useState([]);
+  const [employeeType, setEmployeeType] = useState("");
+  const [location, setLocation] = useState("");
   const [department, setDepartment] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
@@ -19,16 +23,31 @@ function Employees() {
   const [editId, setEditId] = useState(null);
   // Employee List
   const [employees, setEmployees] = useState([]);
+
 useEffect(() => {
+
   axios
     .get("https://localhost:7002/api/employee")
     .then((response) => {
       setEmployees(response.data);
     })
     .catch((error) => {
-  console.log("FULL ERROR:", error);
-  console.log("RESPONSE:", error.response);
-});
+      console.log(error);
+    });
+
+  axios
+    
+  axios.get("https://localhost:7002/api/Employee/EmployeeTypes")
+    .then((response) => {
+      setEmployeeTypes(response.data);
+    });
+
+  axios
+    .get("https://localhost:7002/api/Employee/Locations")
+    .then((response) => {
+      setLocations(response.data);
+    });
+
 }, []);
 // Add new employee to employee list
 function addEmployee() {
@@ -41,7 +60,6 @@ function addEmployee() {
   if (!isValid) return;
 
   const employeeData = {
-    employeeCode: "EMP" + Date.now(),
     employeeName: employeeName,
     email: email,
     department: department,
@@ -49,6 +67,8 @@ function addEmployee() {
     gender: gender,
     designation: designation,
     joiningDate: joiningDate,
+    employeeTypes: employeeType,
+    location: location,
     status: status
   };
   if (editId) {
@@ -188,6 +208,12 @@ function editEmployee(emp) {
       setDesignation={setDesignation}
       joiningDate={joiningDate}
       setJoiningDate={setJoiningDate}
+      employeeTypes={employeeTypes}
+      employeeType={employeeType}
+      setEmployeeType={setEmployeeType}
+      locations={locations}
+      location={location}
+      setLocation={setLocation}
       status={status}
       setStatus={setStatus}
       addEmployee={addEmployee}

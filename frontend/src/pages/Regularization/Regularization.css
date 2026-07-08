@@ -1,0 +1,12 @@
+.regularization-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.regularization-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}

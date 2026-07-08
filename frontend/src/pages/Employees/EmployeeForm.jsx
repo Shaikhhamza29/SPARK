@@ -15,6 +15,12 @@ function EmployeeForm({
   setDesignation,
   joiningDate,
   setJoiningDate,
+  employeeTypes,
+  employeeType,
+  setEmployeeType,
+  locations,
+  location,
+  setLocation,
   status,
   setStatus,
   addEmployee
@@ -79,6 +85,46 @@ function EmployeeForm({
     <option value="Male">Male</option>
     <option value="Female">Female</option>
     <option value="Other">Other</option>
+  </select>
+</div>
+
+<div className="form-group">
+  <label>Employee Type</label>
+
+  <select
+    value={employeeType}
+    onChange={(e) => setEmployeeType(e.target.value)}
+  >
+    <option value="">Select Employee Type</option>
+
+    {employeeTypes.map((item) => (
+      <option
+        key={item.employeeTypeId}
+        value={item.employeeTypeId}
+      >
+        {item.typeName}
+      </option>
+    ))}
+  </select>
+</div>
+
+<div className="form-group">
+  <label>Location</label>
+
+  <select
+    value={location}
+    onChange={(e) => setLocation(e.target.value)}
+  >
+    <option value="">Select Location</option>
+
+    {locations.map((item) => (
+      <option
+        key={item.locationId}
+        value={item.locationId}
+      >
+        {item.locationName}
+      </option>
+    ))}
   </select>
 </div>
 

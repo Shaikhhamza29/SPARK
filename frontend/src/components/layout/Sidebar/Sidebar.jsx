@@ -6,6 +6,8 @@ import logo from "../../../assets/logo/amnikon-logo.png";
 import DashboardRoundedIcon from "@mui/icons-material/DashboardRounded";
 import PeopleRoundedIcon from "@mui/icons-material/PeopleRounded";
 import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
+import FactCheckRoundedIcon from "@mui/icons-material/FactCheckRounded";
+import EditCalendarRoundedIcon from "@mui/icons-material/EditCalendarRounded";
 import EventBusyRoundedIcon from "@mui/icons-material/EventBusyRounded";
 import PaymentsRoundedIcon from "@mui/icons-material/PaymentsRounded";
 import AssessmentRoundedIcon from "@mui/icons-material/AssessmentRounded";
@@ -29,6 +31,20 @@ const menu = [
     icon: <AccessTimeRoundedIcon />,
     path: "/attendance",
   },
+
+  {
+    title: "Regularization",
+    icon: <FactCheckRoundedIcon />,
+    path: "/regularization",
+  },
+  
+  {
+  title: "Employee Regularization",
+  icon: <EditCalendarRoundedIcon />,
+  path: "/employee-regularization",
+  
+  },
+
   {
     title: "Leave",
     icon: <EventBusyRoundedIcon />,

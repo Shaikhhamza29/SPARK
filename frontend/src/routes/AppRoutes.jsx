@@ -3,6 +3,8 @@ import DashboardLayout from "../components/layout/DashboardLayout/DashboardLayou
 import Login from "../pages/Login/Login";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import Employees from "../pages/Employees/Employees";
+import Regularization from "../pages/Regularization/Regularization";
+import EmployeeRegularization from "../pages/EmployeeRegularization/EmployeeRegularization";
 import Attendance from "../pages/Attendance/Attendance";
 import Leave from "../pages/Leave/Leave";
 import Payroll from "../pages/Payroll/Payroll";
@@ -23,12 +25,16 @@ function AppRoutes() {
         {/* Protected Routes */}
         <Route element={<PrivateRoute />}>
           <Route element={<DashboardLayout />}>
-            <Route path="/login" element={<Login />} />
+          
             <Route path="/" element={<Dashboard />} />
 
             <Route path="/employees" element={<Employees />} />
 
             <Route path="/attendance" element={<Attendance />} />
+            
+            <Route path="/regularization" element={<Regularization />}/>
+
+            <Route path="/employee-regularization" element={<EmployeeRegularization />}/>
 
             <Route path="/leave" element={<Leave />} />
 

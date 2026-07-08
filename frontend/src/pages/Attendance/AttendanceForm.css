@@ -1,0 +1,79 @@
+.attendance-form {
+    width: 450px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.attendance-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.attendance-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.attendance-form input,
+.attendance-form select,
+.attendance-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.attendance-form textarea {
+    resize: none;
+    height: 80px;
+}
+
+.attendance-form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.attendance-form button:hover {
+    background-color: #1d4ed8;
+}
+
+.attendance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.attendance-header h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.add-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #1d4ed8;
+}

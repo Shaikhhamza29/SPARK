@@ -32,8 +32,11 @@ import LeavePolicy from "../Admin/Leave/LeavePolicy/LeavePolicy";
 import LeaveBalance from "../Admin/Leave/LeaveManagement/LeaveBalance/LeaveBalance";
 import Hierarchy from "../Admin/Employees/EmployeeHierarchy/Hierarchy";
 import PayrollDashboard from "../Admin/PayrollManagement/PayrollDashboard/PayrollDashboard";
-
-
+import PayslipTemplates from "../Admin/PayrollManagement/PayslipTemplates/PayslipTemplates";
+import CreatePayslipTemplate from "../Admin/PayrollManagement/PayslipTemplates/CreatePayslipTemplate/CreatePayslipTemplate";
+import PayrollProcess from "../Admin/PayrollManagement/PayrollProcess/PayrollProcess";
+import EmployeesPayroll from "../Admin/PayrollManagement/EmployeesPayroll/EmployeesPayroll";
+import EmployeesHistory from "../Admin/PayrollManagement/PayrollHistory/PayrollHistory";
  
 // ================= Employee =================
  
@@ -81,7 +84,6 @@ function AppRoutes() {
                 </Route>
             </Route>
  
-            {/* ================= Admin Portal ================= */}
  
 {/* ================= Admin Portal ================= */}
  
@@ -137,8 +139,26 @@ function AppRoutes() {
     path="/payroll/dashboard"
     element={<PayrollDashboard />}
 />
-
-
+<Route
+    path="/payroll/payslip-templates"
+    element={<PayslipTemplates />}
+/>
+<Route
+    path="/payroll/payslip-templates/create"
+    element={<CreatePayslipTemplate />}
+/>
+<Route
+    path="/payroll/process"
+    element={<PayrollProcess />}
+/>
+<Route
+    path="/payroll/employees"
+    element={<EmployeesPayroll />}
+/>
+<Route
+    path="/payroll/history"
+    element={<EmployeesHistory />}
+/>
         {/* Other */}
  
         <Route path="/reports" element={<Reports />} />

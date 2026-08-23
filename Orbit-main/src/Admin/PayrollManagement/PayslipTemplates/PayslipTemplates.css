@@ -1,0 +1,381 @@
+.payslip-templates-page {
+    width: 100%;
+    min-height: 100%;
+    padding: 42px 48px 60px;
+    box-sizing: border-box;
+    background: #f5f8fc;
+}
+
+.payslip-templates-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.payslip-templates-header h1 {
+    margin: 0;
+    color: #172033;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.payslip-templates-header p {
+    margin: 8px 0 0;
+    color: #8494ad;
+    font-size: 14px;
+}
+
+.pt-primary-button {
+    border: none;
+    border-radius: 7px;
+    padding: 12px 20px;
+    background: #2867e8;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.2s ease;
+}
+
+.pt-primary-button:hover {
+    background: #1e58d0;
+    transform: translateY(-1px);
+}
+
+.pt-primary-button span {
+    font-size: 20px;
+    line-height: 12px;
+}
+
+.pt-toolbar {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.pt-search-wrapper {
+    flex: 1;
+    height: 44px;
+    border: 1px solid #d8dee8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.pt-search-wrapper:focus-within {
+    border-color: #2867e8;
+    box-shadow: 0 0 0 2px rgba(40, 103, 232, 0.08);
+}
+
+.pt-search-icon {
+    color: #8b9ab0;
+    font-size: 25px;
+    margin-right: 8px;
+    line-height: 1;
+}
+
+.pt-search-wrapper input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: #263247;
+    font-size: 14px;
+    background: transparent;
+}
+
+.pt-search-wrapper input::placeholder {
+    color: #9aa8ba;
+}
+
+.pt-toolbar select {
+    height: 44px;
+    min-width: 130px;
+    padding: 0 12px;
+    border: 1px solid #d8dee8;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #45546a;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.pt-toolbar select:focus {
+    border-color: #2867e8;
+}
+
+.pt-count {
+    color: #7f90a8;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.pt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.pt-template-card {
+    position: relative;
+    min-height: 290px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #e3e9f1;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(30, 55, 90, 0.05);
+    transition: 0.2s ease;
+}
+
+.pt-template-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 9px 24px rgba(30, 55, 90, 0.08);
+}
+
+.pt-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.pt-template-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 9px;
+    background: #d83bea;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.pt-menu-wrapper {
+    position: relative;
+}
+
+.pt-more-button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #8796aa;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.pt-more-button:hover {
+    background: #f2f5f9;
+    color: #263247;
+}
+
+.pt-dropdown-menu {
+    position: absolute;
+    top: 36px;
+    right: 0;
+    width: 145px;
+    padding: 6px;
+    background: #ffffff;
+    border: 1px solid #e1e7ef;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(24, 42, 68, 0.12);
+    z-index: 20;
+}
+
+.pt-dropdown-menu button {
+    width: 100%;
+    padding: 9px 10px;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    text-align: left;
+    color: #344054;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.pt-dropdown-menu button:hover {
+    background: #f3f6fa;
+}
+
+.pt-dropdown-menu button.danger {
+    color: #e5484d;
+}
+
+.pt-template-card h2 {
+    margin: 18px 0 8px;
+    color: #172033;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.pt-description {
+    min-height: 40px;
+    margin: 0;
+    color: #8494ad;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.pt-divider {
+    height: 1px;
+    background: #edf0f4;
+    margin: 14px 0;
+}
+
+.pt-card-info {
+    display: flex;
+    gap: 42px;
+}
+
+.pt-card-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.pt-card-info span {
+    color: #a0adbd;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.pt-card-info strong {
+    color: #364358;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.pt-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.pt-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.pt-status.active {
+    color: #1e9b55;
+    background: #dcf8e7;
+}
+
+.pt-status.inactive {
+    color: #e64d55;
+    background: #ffe1e2;
+}
+
+.pt-actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pt-actions button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #8190a5;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.pt-actions button:hover {
+    background: #edf4ff;
+    color: #2867e8;
+}
+
+.pt-empty-state {
+    min-height: 320px;
+    background: #ffffff;
+    border: 1px solid #e3e9f1;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pt-empty-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0d9f5;
+    color: #c632d7;
+    font-size: 28px;
+}
+
+.pt-empty-state h3 {
+    margin: 18px 0 6px;
+    color: #172033;
+}
+
+.pt-empty-state p {
+    margin: 0 0 20px;
+    color: #8494ad;
+    font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+    .pt-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .payslip-templates-page {
+        padding: 25px 18px 40px;
+    }
+
+    .payslip-templates-header {
+        flex-direction: column;
+    }
+
+    .pt-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pt-toolbar select {
+        width: 100%;
+    }
+
+    .pt-grid {
+        grid-template-columns: 1fr;
+    }
+}

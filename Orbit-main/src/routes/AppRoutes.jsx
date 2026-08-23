@@ -4,7 +4,7 @@ import DashboardLayout from "../components/layout/DashboardLayout/DashboardLayou
  
 import Dashboard from "../pages/Dashboard/Dashboard";
 import Attendance from "../Admin/AttendanceManagement/Attendance";
-import Payroll from "../pages/Payroll/Payroll";
+import Payroll from "../Admin/PayrollManagement/Payroll";
 import Reports from "../pages/Reports/Reports";
 import Tickets from "../pages/Tickets/Tickets";
 import SettingsDashboard from "../pages/Settings/SettingsDashboard";
@@ -31,6 +31,9 @@ import LeaveOverview from "../Admin/Leave/LeaveOverview/LeaveOverview";
 import LeavePolicy from "../Admin/Leave/LeavePolicy/LeavePolicy";
 import LeaveBalance from "../Admin/Leave/LeaveManagement/LeaveBalance/LeaveBalance";
 import Hierarchy from "../Admin/Employees/EmployeeHierarchy/Hierarchy";
+import PayrollDashboard from "../Admin/PayrollManagement/PayrollDashboard/PayrollDashboard";
+
+
  
 // ================= Employee =================
  
@@ -107,9 +110,7 @@ function AppRoutes() {
         <Route path="/attendance" element={<Attendance />} />
         <Route path="/attendance/logs" element={<AttendanceLogs />} />
         <Route path="/attendance/dashboard" element={<AttendanceDashboard />} />
-       <Route
-    path="/attendance/shifts"
-    element={<ShiftManagement />}
+       <Route path="/attendance/shifts" element={<ShiftManagement />}
 />
  
         <Route
@@ -126,8 +127,20 @@ function AppRoutes() {
         <Route path="/leave/history" element={<LeaveTakenHistory />} />
         <Route path="/leave/dashboard" element={<LeaveOverview />} />
  
+
+
+ {/* {PayRolls } */}
+
+<Route path="/payroll" element={<Payroll />} />
+
+<Route
+    path="/payroll/dashboard"
+    element={<PayrollDashboard />}
+/>
+
+
         {/* Other */}
-        <Route path="/payroll" element={<Payroll />} />
+ 
         <Route path="/reports" element={<Reports />} />
         <Route path="/tickets" element={<Tickets />} />
         <Route path="/settings" element={<SettingsDashboard />} />

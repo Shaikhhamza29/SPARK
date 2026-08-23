@@ -1,0 +1,337 @@
+/* =========================================================
+   PAYROLL MANAGEMENT
+========================================================= */
+
+.payroll-page {
+    min-height: 100vh;
+    padding: 42px 58px;
+    box-sizing: border-box;
+    background: #f5f7fb;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.payroll-page-header {
+    margin-bottom: 34px;
+}
+
+.payroll-page-header h1 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #172033;
+    letter-spacing: -0.5px;
+}
+
+.payroll-page-header p {
+    margin: 10px 0 0;
+    color: #718096;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MODULE GRID
+========================================================= */
+
+.payroll-module-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+}
+
+
+/* =========================================================
+   MODULE CARD
+========================================================= */
+
+.payroll-module-card {
+    min-height: 340px;
+    padding: 28px 28px 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e7ebf2;
+    border-radius: 18px;
+
+    box-shadow:
+        0 2px 5px rgba(15, 23, 42, 0.025),
+        0 8px 24px rgba(15, 23, 42, 0.035);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.payroll-module-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #dce3ef;
+
+    box-shadow:
+        0 6px 15px rgba(15, 23, 42, 0.06),
+        0 15px 35px rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.payroll-module-icon {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #ffffff;
+
+    margin-bottom: 25px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ICON COLORS
+========================================================= */
+
+.payroll-module-icon.blue {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+}
+
+.payroll-module-icon.green {
+    background: linear-gradient(
+        135deg,
+        #16a34a,
+        #22c55e
+    );
+}
+
+.payroll-module-icon.purple {
+    background: linear-gradient(
+        135deg,
+        #9333ea,
+        #a855f7
+    );
+}
+
+.payroll-module-icon.orange {
+    background: linear-gradient(
+        135deg,
+        #ea580c,
+        #f97316
+    );
+}
+
+.payroll-module-icon.pink {
+    background: linear-gradient(
+        135deg,
+        #d946ef,
+        #ec4899
+    );
+}
+
+.payroll-module-icon.cyan {
+    background: linear-gradient(
+        135deg,
+        #0891b2,
+        #06b6d4
+    );
+}
+
+.payroll-module-icon.teal {
+    background: linear-gradient(
+        135deg,
+        #0d9488,
+        #14b8a6
+    );
+}
+
+.payroll-module-icon.yellow {
+    background: linear-gradient(
+        135deg,
+        #eab308,
+        #f59e0b
+    );
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.payroll-module-content {
+    flex: 1;
+}
+
+.payroll-module-content h2 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 20px;
+    line-height: 1.35;
+
+    font-weight: 700;
+
+    letter-spacing: -0.2px;
+}
+
+.payroll-module-content p {
+    margin: 16px 0 0;
+
+    color: #718096;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    max-width: 270px;
+}
+
+
+/* =========================================================
+   OPEN MODULE BUTTON
+========================================================= */
+
+.payroll-open-module {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 26px;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #2563eb;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+.payroll-open-module:hover {
+    color: #174fc4;
+}
+
+.payroll-arrow {
+    font-size: 25px;
+    line-height: 1;
+
+    transition: transform 0.2s ease;
+}
+
+.payroll-open-module:hover .payroll-arrow {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .payroll-page {
+        padding: 36px 35px;
+    }
+
+    .payroll-module-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .payroll-page {
+        padding: 30px 24px;
+    }
+
+    .payroll-module-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .payroll-module-card {
+        min-height: 320px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .payroll-page {
+        padding: 24px 16px;
+    }
+
+    .payroll-page-header {
+        margin-bottom: 25px;
+    }
+
+    .payroll-page-header h1 {
+        font-size: 26px;
+    }
+
+    .payroll-page-header p {
+        font-size: 14px;
+    }
+
+    .payroll-module-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .payroll-module-card {
+        min-height: 290px;
+        padding: 24px;
+    }
+
+    .payroll-module-icon {
+        width: 64px;
+        height: 64px;
+
+        font-size: 28px;
+        border-radius: 16px;
+    }
+
+}

@@ -1,0 +1,430 @@
+/* =========================================================
+   EMPLOYEE HIERARCHY PAGE
+   ========================================================= */
+
+.hierarchy-page {
+    min-height: 100vh;
+    padding: 28px 34px 50px;
+    background: #f5f7fb;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111827;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.hierarchy-header {
+    margin-bottom: 20px;
+}
+
+.hierarchy-header h1 {
+    margin: 0 0 6px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.hierarchy-header p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #64748b;
+}
+
+/* =========================================================
+   TOOLBAR / EMPLOYEE SEARCH CARD
+   Same style as Employee List toolbar
+   ========================================================= */
+
+.toolbar-card {
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    margin-bottom: 16px;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
+}
+
+/* MUI CardContent */
+
+.toolbar-card .MuiCardContent-root {
+    padding: 20px 22px !important;
+}
+
+.toolbar-card .MuiCardContent-root:last-child {
+    padding-bottom: 20px !important;
+}
+
+/* Toolbar row */
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+}
+
+/* Make employee selector take available space */
+
+.toolbar .MuiFormControl-root {
+    flex: 1;
+}
+
+/* =========================================================
+   EMPLOYEE SELECT
+   ========================================================= */
+
+.toolbar .MuiOutlinedInput-root {
+    background: #ffffff;
+    border-radius: 8px;
+    min-height: 56px;
+}
+
+.toolbar .MuiOutlinedInput-notchedOutline {
+    border-color: #cbd5e1;
+}
+
+.toolbar .MuiOutlinedInput-root:hover
+.MuiOutlinedInput-notchedOutline {
+    border-color: #94a3b8;
+}
+
+.toolbar .MuiOutlinedInput-root.Mui-focused
+.MuiOutlinedInput-notchedOutline {
+    border-color: #2563eb;
+    border-width: 1px;
+}
+
+.toolbar .MuiInputLabel-root {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.toolbar .MuiInputLabel-root.Mui-focused {
+    color: #2563eb;
+}
+
+.toolbar .MuiSelect-select {
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+}
+
+/* =========================================================
+   VIEW HIERARCHY BUTTON
+   ========================================================= */
+
+.toolbar .MuiButton-root {
+    min-width: 170px;
+    height: 56px;
+    padding: 0 22px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: none;
+    box-shadow: none;
+}
+
+.toolbar .MuiButton-root:hover {
+    background: #1d4ed8;
+    box-shadow: none;
+}
+
+.toolbar .MuiButton-root:disabled {
+    background: #cbd5e1;
+    color: #64748b;
+}
+
+/* =========================================================
+   REPORTING STRUCTURE
+   ========================================================= */
+
+.hierarchy-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 22px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.hierarchy-card h2 {
+    margin: 0 0 22px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* =========================================================
+   HIERARCHY FLOW
+   ========================================================= */
+
+.hierarchy-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 12px 0 8px;
+}
+
+.hierarchy-box {
+    min-width: 150px;
+    padding: 17px 20px;
+    background: #f8fafc;
+    border: 1px solid #bfdbfe;
+    border-radius: 9px;
+    text-align: center;
+}
+
+.hierarchy-box span {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.hierarchy-box strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.hierarchy-box.employee {
+    background: #ecfdf5;
+    border-color: #86efac;
+}
+
+.hierarchy-box.super-admin {
+    background: #eef2ff;
+    border-color: #c7d2fe;
+}
+
+.arrow {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+/* =========================================================
+   CONFIGURED HIERARCHIES
+   ========================================================= */
+
+.all-hierarchy-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+    overflow-x: auto;
+}
+
+.all-hierarchy-card h2 {
+    margin: 0 0 16px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.all-hierarchy-card table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* =========================================================
+   TABLE HEADER
+   Same dark blue style as Employee page
+   ========================================================= */
+
+.all-hierarchy-card thead {
+    background: #1f2f68;
+}
+
+.all-hierarchy-card th {
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    border-bottom: none;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   TABLE BODY
+   ========================================================= */
+
+.all-hierarchy-card td {
+    padding: 12px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+}
+
+.all-hierarchy-card tbody tr {
+    background: #ffffff;
+    transition: background 0.15s ease;
+}
+
+.all-hierarchy-card tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* Employee name */
+
+.all-hierarchy-card tbody td:first-child {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* =========================================================
+   COLUMN WIDTHS
+   ========================================================= */
+
+.all-hierarchy-card th:nth-child(1),
+.all-hierarchy-card td:nth-child(1) {
+    width: 20%;
+}
+
+.all-hierarchy-card th:nth-child(2),
+.all-hierarchy-card td:nth-child(2) {
+    width: 17%;
+}
+
+.all-hierarchy-card th:nth-child(3),
+.all-hierarchy-card td:nth-child(3) {
+    width: 18%;
+}
+
+.all-hierarchy-card th:nth-child(4),
+.all-hierarchy-card td:nth-child(4) {
+    width: 18%;
+}
+
+.all-hierarchy-card th:nth-child(5),
+.all-hierarchy-card td:nth-child(5) {
+    width: 17%;
+}
+
+.all-hierarchy-card th:nth-child(6),
+.all-hierarchy-card td:nth-child(6) {
+    width: 10%;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 52px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: #dcfce7;
+    color: #15803d;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* =========================================================
+   EMPTY VALUE
+   ========================================================= */
+
+.all-hierarchy-card td:empty::after {
+    content: "—";
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hierarchy-page {
+        padding: 20px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .toolbar .MuiFormControl-root {
+        width: 100%;
+    }
+
+    .toolbar .MuiButton-root {
+        width: 100%;
+    }
+
+    .hierarchy-flow {
+        justify-content: flex-start;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .hierarchy-page {
+        padding: 15px;
+    }
+
+    .hierarchy-header h1 {
+        font-size: 22px;
+    }
+
+    .hierarchy-header p {
+        font-size: 12px;
+    }
+
+    .toolbar-card .MuiCardContent-root {
+        padding: 16px !important;
+    }
+
+    .all-hierarchy-card {
+        padding: 15px;
+    }
+
+    .hierarchy-card {
+        padding: 16px;
+    }
+
+    .hierarchy-card h2,
+    .all-hierarchy-card h2 {
+        font-size: 16px;
+    }
+
+    .hierarchy-box {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+
+    .all-hierarchy-card table {
+        min-width: 750px;
+    }
+}
